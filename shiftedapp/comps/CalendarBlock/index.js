@@ -80,7 +80,7 @@ const CalendarBlock = ({
                 setCount(count + 1);
                 console.log(count);
             }}>
-                Icon
+                Icon.
             </Col3El2>
         </Col3>
     </Container>
