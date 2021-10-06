@@ -5,9 +5,9 @@ services:
     ports:
       - 3000:3000
     build:
-      context: shifted
+      context: shiftedapp
       dockerfile: Dockerfile
     volumes:
-      - ./shifted:/usr/src/app
+      - ./shiftedapp:/usr/src/app
       - /usr/src/app/node_modules
       - /usr/src/app/.next
