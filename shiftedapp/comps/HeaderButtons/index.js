@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styled, { css } from 'styled-components'
-
+import {useRouter} from 'next/router'
 
 
 const ButtonsCont = styled.button`
@@ -26,15 +26,18 @@ margin: 0;
 `
 
 const Buttons =({
-
     color="grey",
     p="Button",
     bg="transparent",
     txt="16px",
+    routeTo=""
 
 }) =>{
 
-    return <ButtonsCont color={color} bg={bg} txt={txt}>
+    const router = useRouter();
+
+    return <ButtonsCont onClick={()=>router.push(routeTo)} color={color} bg={bg} txt={txt}>
+
         <Text>{p}</Text>
 
     </ButtonsCont>
