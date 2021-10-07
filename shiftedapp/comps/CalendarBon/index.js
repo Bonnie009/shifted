@@ -1,26 +1,29 @@
 import styled, {css} from 'styled-components';
 import * as React from 'react';
 import { useState, useEffect } from 'react';
+import CalendarBlock from '../CalendarBlock';
 
 const CalendarCont = styled.div`
     background-color:#D4E1DA;
-    width:972px;
-    height:486px;
+    width:1000px;
+    height:600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
 `
 //header Cont
 const MonthCont = styled.div`
     display:flex;
-    justify-content:space-around;
+    justify-content:space-evenly;
     align-items:center;
-    flex-wrap:wrap;
-    min-width:200px;
+    min-width:400px;
     min-height:80px;
-    flex-wrap:wrap;
+    width: auto;
 `
 
 const MonthHeader = styled.div`
-
+    font-size: 46px;
 `
 
 //Prev/Next Month Cont
@@ -45,14 +48,16 @@ const RightArrow = styled.i`
 //Weekday Cont
 const WeekdaysCont = styled.div`
     display:flex;
-    justify-content:space-between;
+    justify-content:space-evenly;
     align-items:center;
-    padding-left:50px;
-    padding-right:50px;
+    width: 1000px;
+
 `
 
 const Weekdays = styled.div`
-
+    font-size: 24px;
+    width: 46px;
+    text-align: center;
 `
 //Body Cont
 const CalendarBody = styled.div`
@@ -64,6 +69,8 @@ const CalendarBody = styled.div`
 const DaysCont = styled.div`
 display:flex;
 flex-wrap:wrap;
+margin-left: 50px;
+justify-content: flex-start;
 
 `
 
@@ -107,44 +114,46 @@ const MyCalendar = ({
             <Weekdays>Mon</Weekdays>
             <Weekdays>Tue</Weekdays>
             <Weekdays>Wed</Weekdays>
-            <Weekdays>Thur</Weekdays>
+            <Weekdays>Thu</Weekdays>
             <Weekdays>Fri</Weekdays>
             <Weekdays>Sat</Weekdays>
             <Weekdays>Sun</Weekdays>
         </WeekdaysCont>
 
         <DaysCont>
-            <DaysDiv>1</DaysDiv>
-            <DaysDiv>2</DaysDiv>
-            <DaysDiv>3</DaysDiv>
-            <DaysDiv>4</DaysDiv>
-            <DaysDiv>5</DaysDiv>
-            <DaysDiv>6</DaysDiv>
-            <DaysDiv>7</DaysDiv>
-            <DaysDiv>8</DaysDiv>
-            <DaysDiv>9</DaysDiv>
-            <DaysDiv>10</DaysDiv>
-            <DaysDiv>11</DaysDiv>
-            <DaysDiv>12</DaysDiv>
-            <DaysDiv>13</DaysDiv>
-            <DaysDiv>14</DaysDiv>
-            <DaysDiv>15</DaysDiv>
-            <DaysDiv>16</DaysDiv>
-            <DaysDiv>17</DaysDiv>
-            <DaysDiv>18</DaysDiv>
-            <DaysDiv>19</DaysDiv>
-            <DaysDiv>20</DaysDiv>
-            <DaysDiv>21</DaysDiv>
-            <DaysDiv>22</DaysDiv>
-            <DaysDiv>23</DaysDiv>
-            <DaysDiv>24</DaysDiv>
-            <DaysDiv>25</DaysDiv>
-            <DaysDiv>26</DaysDiv>
-            <DaysDiv>27</DaysDiv>
-            <DaysDiv>28</DaysDiv>
-            <DaysDiv>29</DaysDiv>
-            <DaysDiv>30</DaysDiv>
-            <DaysDiv>31</DaysDiv>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+            <CalendarBlock/>
+
         </DaysCont>
 
     </CalendarCont>
