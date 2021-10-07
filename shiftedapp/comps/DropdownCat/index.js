@@ -23,15 +23,21 @@ const Button = styled.button`
   font:sans-serif;
 `;
 
-const Dropdown = () => {
+const Dropdown = ({
+  textlabel="Employee Group",
+  text0="Cashier",
+  text1="Customer Service",
+  text2="Sales Associate",
+  text3="Store Manager",
+}) => {
   return (
     <Cont>
-      <Label>Employee Group</Label>
+      <Label>{textlabel}</Label> 
       <Select>
-        <option value='0'>Cashier</option>
-        <option value='1'>Customer Service</option>
-        <option value='2'>Sales Associate</option>
-        <option value='3'>Store Manager</option>
+        <option value='0'>{text0}</option>
+        <option value='1'>{text1}</option> 
+        <option value='2'>{text2}</option>
+        <option value='3'>{text3}</option>
       </Select>
       <Button
       onClick={()=>{

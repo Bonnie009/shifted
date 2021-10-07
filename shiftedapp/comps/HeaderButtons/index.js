@@ -5,6 +5,8 @@ import {useRouter} from 'next/router'
 
 
 const ButtonsCont = styled.button`
+display: flex;
+justify-content: center;
 background: ${props=>props.bg};
 border-radius: 3px;
 color:${props=>props.color};
@@ -12,9 +14,9 @@ min-height: 60px;
 min-width: 90px;
 max-height: 60px;
 height: auto;
-width: 150px;
+width: ${props=>props.width};
 border-radius: 10px;
-border: none;
+border: ${props=>props.border};
 align-items: center;
 margin-right: 20px;
 font-size: ${props=>props.txt};
@@ -23,6 +25,7 @@ font-size: ${props=>props.txt};
 const Text = styled.p`
 color:black;
 margin: 0;
+
 `
 
 const Buttons =({
@@ -30,16 +33,16 @@ const Buttons =({
     p="Button",
     bg="transparent",
     txt="16px",
+    width="150px",
+    border="none",
     routeTo=""
 
 }) =>{
 
     const router = useRouter();
 
-    return <ButtonsCont onClick={()=>router.push(routeTo)} color={color} bg={bg} txt={txt}>
-
+    return <ButtonsCont onClick={()=>router.push(routeTo)} color={color} border={border} bg={bg} width={width} txt={txt}>
         <Text>{p}</Text>
-
     </ButtonsCont>
 }
 
