@@ -7,9 +7,10 @@ const Container = styled.div`
     height: 80px;
     width: 120px;
     border-radius: 10px;
-    border: 1px solid black;
-    background-color: fff;
-    box-shadow: -2px 2px 15px 5px rgba(0,0,0,0.34);
+    border: none;
+    background-color: #FFFBF5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 5px;
 `
 
 const Col1 = styled.div`
@@ -45,7 +46,9 @@ const Col3El2 = styled.div`
     display: flex;
     flex: 1;
     justify-content: center;
-    padding: 5px;
+    margin: 2px;
+    border-radius: 10px;
+    align-items: center;
     background-color:${props=>props.btncolor};
 `
 
@@ -54,13 +57,13 @@ const CalendarBlock = ({
 }) => {
     const [count, setCount] = useState(0);
     if (count === 0){
-        btncolor="#969696";
+        btncolor="#747474";
     }
     else if (count === 1){
-        btncolor="#eb3453";
+        btncolor="#EA7373";
     }
     else if (count === 2){
-        btncolor="#83eb34";
+        btncolor="#7BE4AB";
     }
     else if (count > 2){
         setCount(0);
