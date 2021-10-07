@@ -13,9 +13,7 @@ const Testerinput = () => {
 const Con = styled.div`
     display: flex;
     flex-direction: column;
-`
-const P = styled.p`
-    margin-bottom: 3px;
+    margin: 0px;
 `
 
 
@@ -24,9 +22,11 @@ const NumInput = styled.input`
     justify-content: center;
     align-items: center;
     background-color: ${props=>props.bgcolor};
+    color: ${props => props.inputColor || "black"};
     border: 1px solid black;
-    font-size: 14px;
-    padding: ${props=>props.pad};
+    font-size: 12px;
+    margin-top: 10px;
+    padding: ${props=>props.padding};
     width: ${props=>props.wd};
     height: ${props=>props.ht};
 `
@@ -39,13 +39,14 @@ const CRinput = ({
     height='25px',
     padding='',
     defaultValue='hello',
+    inputColor="#7A7A7A",
+    fontsize="14px",
 
     
 }) =>{
     return (
         <Con>
-            <P>{tx}</P>
-            <NumInput defaultValue={defaultValue} type='text' bgcolor={bgcolor} wd={ws} ht={height} padding={padding} />
+            <NumInput defaultValue={defaultValue} type='text' inputColor={inputColor} bgcolor={bgcolor} wd={ws} ht={height} padding={padding} />
         </Con>
     
     )

@@ -2,6 +2,9 @@ import styled from 'styled-components'
 
 const PageName = styled.h1`
   display:flex;
+  font-size: ${props=>props.fontsize};
+  
+  
 `;
 
 // var pagenames = {
@@ -11,10 +14,12 @@ const PageName = styled.h1`
 // }
 
 const PageHeading = ({
-  title="Create Schedule"
+  title="Create Schedule",
+  fontsize="48px",
+  
 }) => {
   return (
-    <PageName>{title}</PageName>
+    <PageName fontsize={fontsize}>{title}</PageName>
   )
 }
 

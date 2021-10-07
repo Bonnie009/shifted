@@ -7,6 +7,8 @@ const TesterBut = () => {
 }
 
 
+
+
 const Mbun = styled.button`
     display: flex;
     justify-content: center;
@@ -15,6 +17,7 @@ const Mbun = styled.button`
     border: 1px solid black;
     font-size: 14px;
     padding: ${props=>props.pad};
+    margin-top: 10px;
     width: ${props=>props.wd};
     height: ${props=>props.ht};
 `
