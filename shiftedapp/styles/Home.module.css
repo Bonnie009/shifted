@@ -43,7 +43,23 @@
 }
 
 /* Group Creation Page START*/
+.list {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px;
+  max-width: 616px;
+  max-height: 722px;
+  height: 100%;
+  width: 100%;
+  background-color:#D4E1DA;
+}
 
+.listtitle {
+  margin-top: 20px;
+  font-size: 24px;
+}
 /* Group Creation Page END */
 
 /* Schedule Page START */

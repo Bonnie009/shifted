@@ -67,10 +67,10 @@ const CalendarBody = styled.div`
 `
 //Days Cont
 const DaysCont = styled.div`
-display:flex;
-flex-wrap:wrap;
-margin-left: 50px;
-justify-content: flex-start;
+    display:flex;
+    flex-wrap:wrap;
+    margin-left: 50px;
+    justify-content: flex-start;
 
 `
 
